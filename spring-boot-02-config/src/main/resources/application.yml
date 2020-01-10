@@ -1,3 +1,21 @@
 #更改端口号
 server:
   port: 8081
+  path: /hello
+
+friend:
+  lastName: zhangsan
+  age: 20
+
+friend: {lastName: zhangsan, age: 20}
+
+pets:
+  - cat
+  - dog
+  - pig
+
+pets: [cat, dog, pig]
+
+
+
+
