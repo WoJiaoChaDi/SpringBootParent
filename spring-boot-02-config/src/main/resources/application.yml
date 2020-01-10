@@ -2,19 +2,32 @@
 server:
   port: 8081
   path: /hello
-
-friend:
-  lastName: zhangsan
-  age: 20
-
-friend: {lastName: zhangsan, age: 20}
-
-pets:
-  - cat
-  - dog
-  - pig
+#
+#friend:
+#  lastName: zhangsan
+#  age: 20
+#
+#friend: {lastName: zhangsan, age: 20}
+#
+#pets:
+#  - cat
+#  - dog
+#  - pig
 
 pets: [cat, dog, pig]
+
+person:
+  lastName: zhangsan
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  maps: {k1: v1, k2: v2}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: 小狗
+    age: 2
 
 
 
