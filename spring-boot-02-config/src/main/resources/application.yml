@@ -1,3 +1,8 @@
+
+spring:
+  profiles:
+    active: dev
+
 #更改端口号
 server:
   port: 8081
@@ -30,5 +35,17 @@ person:
     age: 2
 
 
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
 
+
+---
+
+server:
+  port: 8084
+spring:
+  profiles: prod
 
