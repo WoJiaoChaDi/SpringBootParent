@@ -16,14 +16,11 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @Configuration  //表示这是一个配置类，以前编写的配置文件一样，也可以给容器中添加组件
 @EnableConfigurationProperties({HttpEncodingProperties.class})  //启动指定类的
 
-//ConfigurationProperties功能；将配置文件中对应的值和HttpEncodingProperties绑定起来；并把
-//HttpEncodingProperties加入到ioc容器中
+//ConfigurationProperties功能；将配置文件中对应的值和HttpEncodingProperties绑定起来；并把HttpEncodingProperties加入到ioc容器中
 
-@ConditionalOnWebApplication    //Spring底层@Conditional注解（Spring注解版），根据不同的条件，如果
-//满足指定的条件，整个配置类里面的配置就会生效；    判断当前应用是否是web应用，如果是，当前配置类生效
+@ConditionalOnWebApplication    //Spring底层@Conditional注解（Spring注解版），根据不同的条件，如果满足指定的条件，整个配置类里面的配置就会生效；    判断当前应用是否是web应用，如果是，当前配置类生效
 
-@ConditionalOnClass({CharacterEncodingFilter.class})//判断当前项目有没有这个类
-//CharacterEncodingFilter；SpringMVC中进行乱码解决的过滤器；
+@ConditionalOnClass({CharacterEncodingFilter.class})//判断当前项目有没有这个类CharacterEncodingFilter；SpringMVC中进行乱码解决的过滤器；
 
 @ConditionalOnProperty(
         prefix = "spring.http.encoding",
